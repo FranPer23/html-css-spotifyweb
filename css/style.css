@@ -1,3 +1,5 @@
+/* RESET  */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +16,20 @@ img {
     width: 100%;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100vh;
-    
-}
-
 :root {
-    --player-height: 100px;
+    --player-height: 80px;
     --sidebar-width: 200px;
     --header-height: 100px;
     --main-color: #a3a3a3;
 
+
+}
+
+/* LAYOUT  */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    
 }
 
 .player {
@@ -42,21 +46,23 @@ img {
 
 .sidebar {
     width: var(--sidebar-width);
-    height: 100%;
+    
     background-color: black;
 }
 
 .main-content {
-    overflow-y: auto;
     height: 100%;
-    width: calc (100% - var(--sidebar-width));
+    width: var(--sidebar-width);
     padding: 1rem;
 }
 
+/* HEADER  */
+
 .btn {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
+   border-radius: 20px;
+   border: 1px solid white;
+   padding: .7rem 2rem;
+   text-decoration: none;
 }
 
 .header {
@@ -66,7 +72,13 @@ img {
     right: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
 }
+/* MAIN  */
+/* Sidebar  */
 
 ul {
     display: flex;
@@ -76,10 +88,102 @@ ul {
     padding-top: 2rem;
 }
 
-h2 {
-    padding-top: 2rem;
-}
+
 
 li:first-of-type {
     color: white;
+}
+
+/* Center  */
+/* Center top  */
+
+.menu {
+    display: flex;
+    
+}
+
+.list-album {
+    display: flex;
+    flex-wrap: wrap;  
+    
+}
+
+.list-album:first-of-type {
+    padding-top: var(--header-height)
+}
+
+.album {
+    width: calc(100% / 6 - 20px);
+    padding-right: 1rem;
+    
+}
+
+#round {
+    border-radius: 100%;
+}
+.main-section {
+    overflow-y: auto;
+   
+}
+
+.player {
+    /* display: flex; */
+    width: 100%;
+    
+}  
+
+/* FOOTER  */
+/* Player  */
+
+.player-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    height: var(--player-height);
+    
+}
+
+.left-player {
+   display: flex;
+   align-items: center;
+   padding-bottom: 1rem;
+}
+
+.left-player img {
+    height: 80px;
+    width: 80px;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    
+}
+
+
+
+.center-player {
+   width: 30%;
+   text-align: center;
+   
+}
+
+.spazio {
+    padding-left: 2rem;
+}
+
+.center-player hr {
+    margin-top: .8rem;
+    width: 80%;
+    
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-player {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+   
 }
