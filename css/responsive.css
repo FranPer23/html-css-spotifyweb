@@ -13,6 +13,11 @@
         top: 10px;
         left: 10px;
         color: white;
+        width: 30px;
+    }
+
+    .name-playlist {
+        display: none;
     }
 
     .main-content {
@@ -21,6 +26,10 @@
 
     .header {
         width: calc(100% - var(--sidebar-width));
+    }
+
+    span {
+        display: none;
     }
 }
 
@@ -36,4 +45,6 @@
     .icon {
         display: none;
     }
+
+
 }
